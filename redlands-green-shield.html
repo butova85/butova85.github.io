@@ -12,26 +12,43 @@
 
   <link rel="stylesheet" href="styles.css" />
   <style>
-    .story-content {
-      max-width: 850px;
-      margin: 0 auto;
-      padding: 40px 24px;
-    }
-    .article-image {
-      width: 100%;
-      border-radius: var(--radius);
-      margin: 24px 0;
-      border: 1px solid var(--card-border);
-    }
-    blockquote {
-      font-size: 1.4rem;
-      font-style: italic;
-      color: var(--accent-dark);
-      border-left: 4px solid var(--accent);
-      padding-left: 20px;
-      margin: 30px 0;
-    }
-  </style>
+  .story-content {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 40px 24px;
+  }
+  /* Layout for side-by-side images */
+  .commute-row {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  .commute-row figure {
+    margin: 0;
+    flex: 1;
+  }
+  .article-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid var(--card-border);
+    display: block;
+  }
+  figcaption {
+    font-size: 0.75rem;
+    color: var(--text-soft);
+    margin-top: 5px;
+    text-align: center;
+  }
+  blockquote {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--accent-dark);
+    border-left: 4px solid var(--accent);
+    padding-left: 20px;
+    margin: 30px 0;
+  }
+</style>
 </head>
 <body>
   <div class="container">
@@ -57,20 +74,16 @@
             the persistent, gray-greenish smog covering the valley almost all the time.
           </p>
 
-          <div class="image-row">
-            <figure style="margin: 0;">
-              <img src="assets/pic1.jpg" alt="I-10 WB View" class="article-image" />
-              <figcaption style="font-size: 0.85rem; color: var(--text-soft); margin-top: 8px; text-align: center;">
-                I-10 WB: Valley smog layer.
-              </figcaption>
-            </figure>
-            <figure style="margin: 0;">
-              <img src="assets/pic2.jpg" alt="I-10 WB View" class="article-image" />
-              <figcaption style="font-size: 0.85rem; color: var(--text-soft); margin-top: 8px; text-align: center;">
-                Approaching Redlands.
-              </figcaption>
-            </figure>
-          </div>
+          <div class="commute-row">
+        <figure>
+          <img src="assets/pic1.jpg" alt="I-10 WB smog" class="article-image">
+          <figcaption>I-10 WB smog</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/pic2.jpg" alt="Approaching Redlands" class="article-image">
+          <figcaption>Approaching Redlands</figcaption>
+        </figure>
+      </div>
           
           <p class="muted">
             In comparison to other cities in California, San Bernardino County’s respiratory 
