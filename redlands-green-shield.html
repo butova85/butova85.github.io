@@ -3,33 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Redlands Green Shield 100K | Project Story & Progress</title>
+  <title>Redlands Green Shield 100K | Project Story</title>
+  
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+
   <link rel="stylesheet" href="styles.css" />
   <style>
-    /* Custom tweaks for the Story Map flow */
     .story-content {
       max-width: 850px;
       margin: 0 auto;
       padding: 40px 24px;
-    }
-    .update-log {
-      border-left: 3px solid var(--accent);
-      padding-left: 20px;
-      margin-top: 30px;
-    }
-    .timestamp {
-      font-weight: 800;
-      color: var(--accent);
-      text-transform: uppercase;
-      font-size: 0.85rem;
-      display: block;
-      margin-bottom: 8px;
     }
     .article-image {
       width: 100%;
       border-radius: var(--radius);
       margin: 24px 0;
       border: 1px solid var(--card-border);
+    }
+    blockquote {
+      font-size: 1.4rem;
+      font-style: italic;
+      color: var(--accent-dark);
+      border-left: 4px solid var(--accent);
+      padding-left: 20px;
+      margin: 30px 0;
     }
   </style>
 </head>
@@ -46,57 +46,51 @@
 
     <main class="card">
       <div class="story-content">
-        <p class="eyebrow">Project Story & Progress</p>
-        <h1 style="font-size: 3rem; margin-bottom: 20px;">Redlands Green Shield 100K</h1>
+        <p class="eyebrow">Project Story</p>
+        <h1 style="font-size: 2.8rem; margin-bottom: 20px;">Redlands Green Shield 100K</h1>
         
-        <p class="subtitle" style="font-size: 1.2rem;">
-          This is a living document of my journey to plan and map the planting of 100,000 trees 
-          in Redlands, CA. As a resident and an engineer, I am using GIS to build 
-          a data-driven "green shield" for our community.
-        </p>
+        <section>
+          <h2>The Origin: A Vision Through the Smog</h2>
+          <p class="muted">
+            My journey with this project began with a simple observation during my daily commute. 
+            Driving back and forth between San Bernardino and Yucaipa along the I-10, I noticed 
+            the persistent, gray-greenish smog covering the valley almost all the time.
+          </p>
+          <p class="muted">
+            In comparison to other cities in California, San Bernardino County’s respiratory 
+            health situation is noticeably challenging. The region has become the largest 
+            warehouse and logistics hub in the state, which has drastically increased 
+            heavy-duty vehicle emissions. Our high temperatures and intense sunlight trigger 
+            chemical reactions between vehicle exhaust and industrial gases, forming ground-level ozone.
+          </p>
+        </section>
 
         <img src="assets/redlands-map-preview.jpg" alt="ArcGIS 3D Digital Twin of Redlands" class="article-image" />
 
         <section>
-          <h2>The Vision</h2>
+          <h2>The Inspiration</h2>
           <p class="muted">
-            Redlands is known for its greenery, but as temperatures rise, the urban canopy 
-            needs strategic expansion. My goal is to identify exactly where these 100,000 
-            trees will have the most impact—reducing heat islands and improving air quality.
+            On October 15, 2025, I visited the Esri Fall Education Open House in Redlands. 
+            During the campus tour, I learned that the high density of trees on the Esri campus 
+            works like a natural air conditioner—lowering the local temperature by 2°F and 
+            cleaning the air even in the hottest summers.
+          </p>
+          
+          <blockquote>
+            "How many trees do we need to plant in Redlands to lower the temperature by 2°F across the whole city?"
+          </blockquote>
+
+          <p class="muted">
+            As an engineer, I want to answer this question. This project is a living effort to 
+            use GIS and spatial analysis to design a "Green Shield" for our community.
           </p>
         </section>
 
         <hr style="border: 0; border-top: 1px solid var(--card-border); margin: 40px 0;">
 
-        <section id="updates">
-          <h2>Project Updates & Progress</h2>
-          
-          <div class="update-log">
-            <span class="timestamp">March 27, 2026</span>
-            <h3>Identifying Planting Zones</h3>
-            <p class="muted">
-              I have started identifying specific planting zones by creating a 3D map of Redlands 
-              in ArcGIS. By layering current canopy data over infrastructure maps, 
-              I can see the "gaps" in our green shield.
-            </p>
-          </div>
-
-          <div class="update-log" style="margin-top: 40px;">
-            <span class="timestamp">March 22, 2026</span>
-            <h3>Project Initiation</h3>
-            <p class="muted">
-              Defined the core project plan and structure. The focus is on using 
-              automation engineering principles to manage a massive environmental goal.
-            </p>
-          </div>
-          
-          </section>
-
-        <hr style="border: 0; border-top: 1px solid var(--card-border); margin: 40px 0;">
-
         <section id="tools">
           <h3>Technical Toolkit</h3>
-          <p class="muted">To build this map and manage the data, I am utilizing:</p>
+          <p class="muted">To build this map and manage the environmental data, I am utilizing:</p>
           <ul class="clean" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
             <li><strong>ArcGIS Pro:</strong> 3D modeling and Digital Twins.</li>
             <li><strong>Python:</strong> Automating spatial data processing.</li>
