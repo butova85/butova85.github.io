@@ -3,8 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Redlands Green Shield 100K | Elena Butova</title>
+  <title>Redlands Green Shield 100K | Project Story & Progress</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Custom tweaks for the Story Map flow */
+    .story-content {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+    .update-log {
+      border-left: 3px solid var(--accent);
+      padding-left: 20px;
+      margin-top: 30px;
+    }
+    .timestamp {
+      font-weight: 800;
+      color: var(--accent);
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      display: block;
+      margin-bottom: 8px;
+    }
+    .article-image {
+      width: 100%;
+      border-radius: var(--radius);
+      margin: 24px 0;
+      border: 1px solid var(--card-border);
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -13,60 +40,75 @@
         <div class="brand">Elena Butova</div>
         <nav class="nav">
           <a href="index.html">← Back to Portfolio</a>
-          <a class="btn" href="assets/resume.pdf" target="_blank" rel="noopener">Download Resume</a>
         </nav>
       </div>
     </header>
 
-    <section class="hero card">
-      <div>
-        <p class="eyebrow">GIS & Urban Planning Project</p>
-        <h1>Redlands Green Shield 100K</h1>
-        <p class="subtitle">
-          A strategic GIS initiative to plan and map the planting of 100,000 trees in Redlands, CA. 
-          This project leverages 3D digital twins to create a sustainable "green shield" against rising urban temperatures.
+    <main class="card">
+      <div class="story-content">
+        <p class="eyebrow">Project Story & Progress</p>
+        <h1 style="font-size: 3rem; margin-bottom: 20px;">Redlands Green Shield 100K</h1>
+        
+        <p class="subtitle" style="font-size: 1.2rem;">
+          This is a living document of my journey to plan and map the planting of 100,000 trees 
+          in Redlands, CA. As a resident and an engineer, I am using GIS to build 
+          a data-driven "green shield" for our community.
         </p>
-        <div class="hero-actions">
-          <a class="btn" href="https://github.com/butova85" target="_blank">View on GitHub</a>
-        </div>
-      </div>
-      <div class="portrait-wrap" style="aspect-ratio: 16/9;">
-        <img src="assets/redlands-map-preview.jpg" alt="3D Map of Redlands Green Shield" />
-      </div>
-    </section>
 
-    <section class="grid-2">
-      <div class="section card">
-        <h2>Project Objectives</h2>
-        <p class="muted">
-          The goal is to enhance the city's urban canopy through data-driven decision-making. By identifying high-heat zones and 
-          available planting areas, we can optimize the environmental impact of every new tree.
-        </p>
-        <ul class="clean">
-          <li><strong>3D Modeling:</strong> Created a digital twin of Redlands in ArcGIS Pro.</li>
-          <li><strong>Heat Analysis:</strong> Used spatial data to identify "heat islands" requiring urgent canopy coverage.</li>
-          <li><strong>Scalability:</strong> Designed a phased planting plan for 100,000 trees over a multi-year period.</li>
-        </ul>
-      </div>
+        <img src="assets/redlands-map-preview.jpg" alt="ArcGIS 3D Digital Twin of Redlands" class="article-image" />
 
-      <div class="section card">
-        <h2>Tools & Technologies</h2>
-        <ul class="clean">
-          <li>ArcGIS Pro & ArcGIS Online</li>
-          <li>3D Scene Layers (Digital Twins)</li>
-          <li>Spatial Analysis Tools</li>
-          <li>Python for Task Automation</li>
-          <li>Data Validation & QA</li>
-        </ul>
-      </div>
-    </section>
+        <section>
+          <h2>The Vision</h2>
+          <p class="muted">
+            Redlands is known for its greenery, but as temperatures rise, the urban canopy 
+            needs strategic expansion. My goal is to identify exactly where these 100,000 
+            trees will have the most impact—reducing heat islands and improving air quality.
+          </p>
+        </section>
 
-    <footer class="card">
-      <p>Interested in the technical details of this project?</p>
-      <a href="index.html#contact" class="btn secondary">Contact Me</a>
-      <div style="margin-top: 20px; font-size: 0.85rem;">
-        © <span id="year"></span> Elena Butova · Redlands Green Shield 100K
+        <hr style="border: 0; border-top: 1px solid var(--card-border); margin: 40px 0;">
+
+        <section id="updates">
+          <h2>Project Updates & Progress</h2>
+          
+          <div class="update-log">
+            <span class="timestamp">March 27, 2026</span>
+            <h3>Identifying Planting Zones</h3>
+            <p class="muted">
+              I have started identifying specific planting zones by creating a 3D map of Redlands 
+              in ArcGIS. By layering current canopy data over infrastructure maps, 
+              I can see the "gaps" in our green shield.
+            </p>
+          </div>
+
+          <div class="update-log" style="margin-top: 40px;">
+            <span class="timestamp">March 22, 2026</span>
+            <h3>Project Initiation</h3>
+            <p class="muted">
+              Defined the core project plan and structure. The focus is on using 
+              automation engineering principles to manage a massive environmental goal.
+            </p>
+          </div>
+          
+          </section>
+
+        <hr style="border: 0; border-top: 1px solid var(--card-border); margin: 40px 0;">
+
+        <section id="tools">
+          <h3>Technical Toolkit</h3>
+          <p class="muted">To build this map and manage the data, I am utilizing:</p>
+          <ul class="clean" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <li><strong>ArcGIS Pro:</strong> 3D modeling and Digital Twins.</li>
+            <li><strong>Python:</strong> Automating spatial data processing.</li>
+            <li><strong>ArcGIS Online:</strong> Project visualization and sharing.</li>
+            <li><strong>Spatial Analysis:</strong> Environmental impact modeling.</li>
+          </ul>
+        </section>
       </div>
+    </main>
+
+    <footer class="card" style="margin-top: 20px;">
+      <p>© <span id="year"></span> Elena Butova · Redlands Green Shield 100K</p>
     </footer>
   </div>
 
