@@ -1,46 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redlands Green Shield 100K | Elena Butova</title>
-    <link rel="stylesheet" href="css/style.css"> </head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redlands Green Shield 100K | Elena Butova</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html">← Back to Portfolio</a>
+  <div class="container">
+    <header class="topbar card">
+      <div class="topbar-inner">
+        <div class="brand">Elena Butova</div>
+        <nav class="nav">
+          <a href="index.html">← Back to Portfolio</a>
+          <a class="btn" href="assets/resume.pdf" target="_blank" rel="noopener">Download Resume</a>
         </nav>
+      </div>
     </header>
 
-    <main style="padding: 2rem; max-width: 800px; margin: auto;">
+    <section class="hero card">
+      <div>
+        <p class="eyebrow">GIS & Urban Planning Project</p>
         <h1>Redlands Green Shield 100K</h1>
-        
-        <section>
-            <h3>Project Overview</h3>
-            <p>
-                The Redlands Green Shield project is a comprehensive GIS-based initiative designed to plan, 
-                visualize, and track the planting of 100,000 trees in Redlands, California. 
-                The goal is to enhance the city's urban canopy and provide a "green shield" against rising temperatures.
-            </p>
-        </section>
+        <p class="subtitle">
+          A strategic GIS initiative to plan and map the planting of 100,000 trees in Redlands, CA. 
+          This project leverages 3D digital twins to create a sustainable "green shield" against rising urban temperatures.
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="https://github.com/butova85" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+      <div class="portrait-wrap" style="aspect-ratio: 16/9;">
+        <img src="assets/redlands-map-preview.jpg" alt="3D Map of Redlands Green Shield" />
+      </div>
+    </section>
 
-        <section>
-            <h3>Key Features</h3>
-            <ul>
-                <li><strong>3D City Modeling:</strong> Developed a digital twin of Redlands using ArcGIS to simulate tree growth and shade impact.</li>
-                <li><strong>Spatial Analysis:</strong> Identified optimal planting zones based on soil quality, existing infrastructure, and heat map data.</li>
-                <li><strong>Strategic Planning:</strong> Established a phased project plan for long-term sustainability and maintenance.</li>
-            </ul>
-        </section>
+    <section class="grid-2">
+      <div class="section card">
+        <h2>Project Objectives</h2>
+        <p class="muted">
+          The goal is to enhance the city's urban canopy through data-driven decision-making. By identifying high-heat zones and 
+          available planting areas, we can optimize the environmental impact of every new tree.
+        </p>
+        <ul class="clean">
+          <li><strong>3D Modeling:</strong> Created a digital twin of Redlands in ArcGIS Pro.</li>
+          <li><strong>Heat Analysis:</strong> Used spatial data to identify "heat islands" requiring urgent canopy coverage.</li>
+          <li><strong>Scalability:</strong> Designed a phased planting plan for 100,000 trees over a multi-year period.</li>
+        </ul>
+      </div>
 
-        <section>
-            <h3>Tools Used</h3>
-            <p>ArcGIS Pro, Python for automation, 3D Scene Layers.</p>
-        </section>
-    </main>
+      <div class="section card">
+        <h2>Tools & Technologies</h2>
+        <ul class="clean">
+          <li>ArcGIS Pro & ArcGIS Online</li>
+          <li>3D Scene Layers (Digital Twins)</li>
+          <li>Spatial Analysis Tools</li>
+          <li>Python for Task Automation</li>
+          <li>Data Validation & QA</li>
+        </ul>
+      </div>
+    </section>
 
-    <footer>
-        <p>© 2026 Elena Butova</p>
+    <footer class="card">
+      <p>Interested in the technical details of this project?</p>
+      <a href="index.html#contact" class="btn secondary">Contact Me</a>
+      <div style="margin-top: 20px; font-size: 0.85rem;">
+        © <span id="year"></span> Elena Butova · Redlands Green Shield 100K
+      </div>
     </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
